@@ -1,14 +1,29 @@
 # README #
-This sample inventoy application.
 
-### Software requirements ###
-* PHP 7.x
-* Postgresql 9.5 or higher
-* Your favorite SQL Manager Tool ;)
+This README would normally document whatever steps are necessary to get your application up and running.
 
+### What is this repository for? ###
+
+* Quick summary
+* Version
+* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
 
 ### How do I get set up? ###
-* Clone this repo to your wwwroot folder
-* Restore database from DB directory
-* Open file /application/config/database.php and edit database configuration 
-* Enjoy!
+
+* Summary of set up
+* Configuration
+* Dependencies
+* Database configuration
+* How to run tests
+* Deployment instructions
+
+### Contribution guidelines ###
+
+* Writing tests
+* Code review
+* Other guidelines
+
+### Who do I talk to? ###
+
+* Repo owner or admin
+* Other community or team contact
