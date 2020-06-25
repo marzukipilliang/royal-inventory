@@ -8,10 +8,8 @@ This sample inventoy application.
 
 
 ### How do I get set up? ###
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Clone this repo to your wwwroot folder
+* Restore database from DB directory
+* Open file /application/config/database.php and edit database configuration 
+* Enjoy!
 
