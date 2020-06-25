@@ -2,8 +2,8 @@
 This sample inventoy application.
 
 ### Software requirements ###
-* PHP 7.x
-* Postgresql 9.5 or higher
+* PHP 7.2 or higher
+* Postgresql 10.x or higher
 * Your favorite SQL Manager Tool ;)
 
 
