@@ -1,9 +1,9 @@
-        <form id="formActions" role="form" action="<?= base_url('api/APISatuan/edit')?>">
+        <form id="formActions" role="form" action="<?= base_url('api/APIGudang/edit')?>">
             <div class="row">         
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Nama Satuan</label>
-                        <input style="text-transform: uppercase"  value="<?= $satuan->nm_satuan ?>" name="nm_satuan" type="text" class="form-control"  maxlength="15" required>
+                        <label>Nama Gudang</label>
+                        <input style="text-transform: uppercase"  value="<?= $gudang->nm_gudang ?>" name="nm_gudang" type="text" class="form-control"  maxlength="25" required>
                     </div>
                 </div>
 				<div class="col-md-6">
@@ -11,7 +11,7 @@
 						<label>&nbsp;</label>
 						<div>
 							<label>
-								<input type="hidden" name="id" value="<?= $satuan->satuan_id ?>">
+								<input type="hidden" name="id" value="<?= $gudang->gudang_id ?>">
 								<button type="submit" class="btn btn-success">Update</button>
 							</label>
 						</div>

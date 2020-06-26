@@ -30,8 +30,6 @@
 	<script src="<?= base_url().'assets/'?>js/custom.js"></script>
 	<script src="<?= base_url().'assets/'?>js/bootstrap-table.js"></script>
 
-	<!-- Javascript Moment -->
-	<script src="<?= base_url().'assets/'?>js/moment.min.js"></script>
 
 	<script>
 		!function ($) {
@@ -99,8 +97,8 @@
 		function DateFormatter(value, row, index) {
 			var tgl = '';
 			if (value != null) {
-				dt = new Date(value);
-				tgl = moment(dt).format('D MMM YYYY');
+				dt = new Date(value).toDateString();
+				tgl = dt;
 			}
 			return tgl;
 		}

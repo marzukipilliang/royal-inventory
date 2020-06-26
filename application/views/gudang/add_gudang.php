@@ -1,9 +1,9 @@
-        <form id="formActions" role="form" action="<?= base_url('api/APISatuan/add')?>">
+        <form id="formActions" role="form" action="<?= base_url('api/APIGudang/add')?>">
             <div class="row">         
                 <div class="col-md-6">
                     <div class="form-group">
-                        <label>Nama Satuan</label>
-                        <input style="text-transform: uppercase" name="nm_satuan" type="text" class="form-control " maxlength="15" required>
+                        <label>Nama Gudang</label>
+                        <input style="text-transform: uppercase" name="nm_gudang" type="text" class="form-control" maxlength="25" required>
                     </div>
                 </div>
 				<div class="col-md-6">

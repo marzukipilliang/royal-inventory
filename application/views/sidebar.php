@@ -27,48 +27,40 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="#"><span>AGTI</span> BILLING</a>
-				<ul class="nav navbar-top-links navbar-right">
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						<em class="fa fa-envelope"></em><span class="label label-danger">0</span>
-					</a>
-						
-					</li>
-					<li class="dropdown"><a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-						<em class="fa fa-bell"></em><span class="label label-info">0</span>
-					</a>
-						
-					</li>
-				</ul>
+				<a class="navbar-brand" href="#"><span>ROYAL</span> INVENTORY</a>
+				
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<div class="profile-sidebar">
 			
-			<div class="profile-usertitle">
-				<div class="profile-usertitle-name">Administrator</div>
-				<div class="profile-usertitle-status"><span class="indicator label-success"></span>Manager</div>
+			<div class="image-responsive">
+				<img class="img-responsive" src="<?= base_url().'assets/'?>images/logo.jpg" alt="Chania"> 
 			</div>
 			<div class="clear"></div>
 		</div>
 		<div class="divider"></div>
 		
 		<ul class="nav menu">
-			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
+			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-dashboard">&nbsp;</em> Soal No. 1.1.3</a></li>
 			<li class="<?= $active=='reports' ? 'active' : '' ?>"><a href="<?= base_url('JenisReport')?>"><em class="fa fa-bar-chart">&nbsp;</em> Report</a></li>
 			
-			<li class="parent "><a data-toggle="collapse" href="#sub-users">
-				<em class="fa fa-navicon">&nbsp;</em> Users <span data-toggle="collapse" href="#sub-users" class="icon pull-right"><em class="fa fa-plus"></em></span>
+			<li class="parent "><a data-toggle="collapse" href="#sub-master">
+				<em class="fa fa-navicon">&nbsp;</em> Master <span data-toggle="collapse" href="#sub-master" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
-				<ul class="children <?= in_array($active, array('group','user','access')) ? '' : 'collapse' ?>" id="sub-users">
-					<li><a class="<?= $active =='group' ? 'active' : '' ?>" href="<?= base_url('UserGroup')?>">
-						<span class="fa fa-users">&nbsp;</span> User Group
+				<ul class="children <?= in_array($active, array('satuan','produk','gudang')) ? '' : 'collapse' ?>" id="sub-master">
+					<li><a class="<?= $active =='gudang' ? 'active' : '' ?>" href="<?= base_url('Gudang')?>">
+						<span class="fa fa-institution">&nbsp;</span> Gudang
 					</a></li>	
+					<li><a class="<?= $active =='satuan' ? 'active' : '' ?>" href="<?= base_url('Satuan')?>">
+						<span class="fa fa-archive">&nbsp;</span> Satuan
+					</a></li>
+					
 				</ul>
 			</li>
 			
-			<li><a href="<?= base_url('Dashboard/logout')?>"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
+			<li><a href="<?= base_url('Config')?>"><em class="fa fa-cog">&nbsp;</em> Config</a></li>
 		</ul>
 	</div><!--/.sidebar-->
 		

@@ -8,33 +8,31 @@
 			<div class="col-lg-12">
 				<div class="panel panel-default">
 					<div class="panel-body" >
-						<table id="tbl" data-toggle="table" data-url="<?= base_url('api/APIDashboard/ac/?nik='.$admin->nik)?>"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="date_created" data-sort-order="desc">
-							<thead>
-							<tr>
-								<th data-field="empid" data-align="center">NIK</th>
-								<th data-field="name" >Nama</th>
-								<th data-field="pmtelp" >HP</th>
-								<th data-field="gender" data-align="center" >Gender</th>
-								<th data-formatter="ScheduleFormatter" data-field="empid" data-align="center">Schedule</th> 
-								<th data-field="position_begin" data-align="center">Tgl Aktif</th>
-								<th data-field="termination" data-align="center">Termination</th>
-							</tr>
-							</thead>
-						</table>
-
+					<form method="post" id="formSoal" role="form" action="<?= base_url('Dashboard')?>">
+							<div class="row">         
+								<div class="col-md-3">
+									<div class="form-group">
+										<label>Silakan input angka 1 - 100:</label>
+										<div class="input-group">
+											<input value="<?= $angka ?>" id="angka" name="angka" type="number" class="form-control input-md" placeholder="Input Angka" maxlength="3" required /><span class="input-group-btn">
+												<button class="btn btn-primary btn-md" id="btn-submit">Submit</button>
+										</span></div>
+									
+									</div>
+								</div>
+								<div class="col-md-3">
+									<div class="form-group has-success">
+										<label>Your number:</label>
+										<input id="result" name="result" type="text" class="form-control" value="<?= $result ?>" readonly>
+										<p class="help-block" ><?= $jackpot ?></p>
+									</div>
+								</div>
+								
+							</div>
 						
+							
+						</form>		
 					</div>
 				</div>	
 			</div>
 		</div><!--/.row-->		
-	<script>
-		window.onload = function () {
-			var chart1 = document.getElementById("line-chart").getContext("2d");
-			window.myLine = new Chart(chart1).Line(lineChartData, {
-			responsive: true,
-			scaleLineColor: "rgba(0,0,0,.2)",
-			scaleGridLineColor: "rgba(0,0,0,.05)",
-			scaleFontColor: "#c5c7cc"
-			});
-		};
-	</script>

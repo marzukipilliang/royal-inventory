@@ -14,22 +14,39 @@ class Dashboard extends CI_Controller {
 	
 	function index()
 	{
+		$result = '';
+		$angka = '';
+		$jackpot = '';
+		if (isset($_POST['angka'])){
+			$angka = $_POST['angka'];
+			switch (TRUE){
+				case in_array($angka, range(1, 100)):
+					$result = $angka;
+					if (($angka % 3 == 0 && $angka % 5 == 0)){
+						$result = 'Foo Bar';
+						$jackpot = 'Horay... you got jackpot!';
+					}else if ($angka % 3 == 0){
+						$result = 'Foo';
+					}else if ($angka % 5 == 0){
+						$result = 'Bar';
+					
+					}
+				break;
 				
+				default:
+				print '<script>alert("Angka harus 1 - 100")</script>';
+
+			}
+			
+		}
+		
+		$this->data['angka'] = $angka;
+		$this->data['result'] = $result;
+		$this->data['jackpot'] = $jackpot;
+
 		$this->load->view('sidebar', $this->data);
 		$this->load->view('body', $this->data);
 		$this->load->view('foot', $this->data);
-		
-	}
-
-	function login()
-	{
-		$this->load->view('login');		
-	}
-	
-	function logout()
-	{
-		unset($_SESSION['admin']);
-		$this->load->view('login');
 		
 	}
 
