@@ -5,7 +5,7 @@
         <div class="modal-content">
         <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="myModalLabel">AGTI Billing</h4>
+            <h4 class="modal-title" id="myModalLabel">Royal Inventory</h4>
         </div>
         <div class="modal-body">
             <img src="<?= base_url('assets/images/')?>loading.gif" /> 
@@ -96,12 +96,6 @@
 				
 		}
 
-		function TrashFormatter(value, row, index) {
-			var el = '<a class="Actions" data-toggle="modal" href="#myActions" data-id="' + value + '" title="Delete"><span class="glyphicon glyphicon-trash"></span></a>';
-			return el;
-				
-		}
-
 		function DateFormatter(value, row, index) {
 			var tgl = '';
 			if (value != null) {
@@ -110,51 +104,7 @@
 			}
 			return tgl;
 		}
-
-		//JS isActive
-		function ActiveFormatter(value, row, index) {
-			var el = '<strong>';
-			if (value==1) {
-				el += 'Active';
-			
-			}else {
-				el += 'Inactive';    
-			}
-
-			el += '</strong>';
-			return el;
-				
-		}
-
-       function ImageFormatter(value, row, index) {
-		   var el;
-		   if (value != null){
-				var imgSrc = '<?= base_url()?>uploads/150/' + value;
-				el = '<p align="center"><img class="img-responsive" src="'+ imgSrc + '" ></p>';	
-		   }
-		   return el;    
-        }
-
-		function CameraFormatter(value, row, index) {
-                var el = ' <a class="Actions" data-toggle="modal" href="#myActions" data-id="' + value + '" title="Images"><span class="glyphicon glyphicon-camera"></span></a>';
-		            return el;
-        }
-
-		function ListFormatter(value, row, index){
-			var el = '';
-			if (row.is_active == 0) el += '<del>';  
-				el += value;
-			if (row.is_active == 0) el += '</del>';
-			return el;
-		}
-
-
-		function ChevronFormatter(value, row, index){
-			var el = '';
-			if (value == 1) el += '<i class="fa fa-check"></i>';
-
-			return el;
-		}
+		
 	</script>
 
 </body>
