@@ -83,8 +83,8 @@ CREATE TABLE public.transaksi_header (
 	gudang_id int NOT NULL,
 	mutasi_id int NOT NULL,
 	tanggal date NOT NULL,
+	tujuan_id int NULL,
 	ref_id int NULL,
-	ref_no int NULL,
 	date_created timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT transaksi_header_pkey PRIMARY KEY (transaksi_id)
 );
@@ -97,10 +97,18 @@ ALTER TABLE public.transaksi_header ADD CONSTRAINT transaksi_header_fkey2 FOREIG
 CREATE TABLE public.transaksi_detail (
 	transaksi_id int NOT NULL,
 	produk_id int NOT NULL,
-	qty_id int NOT NULL,
+	qty int NOT NULL,
 	date_created timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
 	CONSTRAINT transaksi_detail_pkey PRIMARY KEY (transaksi_id, produk_id)
 );
 -- public.transaksi_detail foreign keys
 ALTER TABLE public.transaksi_detail ADD CONSTRAINT transaksi_detail_fkey1 FOREIGN KEY (transaksi_id) REFERENCES transaksi_header(transaksi_id);
 ALTER TABLE public.transaksi_detail ADD CONSTRAINT transaksi_detail_fkey2 FOREIGN KEY (produk_id) REFERENCES m_produk(produk_id);
+
+
+-- public.t_temp definition
+CREATE TABLE public.t_temp (
+	temp_id serial NOT NULL,
+	produk_id int NOT NULL,
+	qty int NOT NULL
+);

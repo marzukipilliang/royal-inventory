@@ -8,7 +8,6 @@
                 </div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>&nbsp;</label>
 						<div>
 							<label>
 								<input type="hidden" name="id" value="<?= $gudang->gudang_id ?>">

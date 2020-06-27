@@ -8,7 +8,6 @@ class Dashboard extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-		$this->load->model('m_dashboard');
 		$this->data['active'] = 'dashboard';
 	} 
 	

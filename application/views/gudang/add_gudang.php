@@ -8,7 +8,6 @@
                 </div>
 				<div class="col-md-6">
 					<div class="form-group">
-						<label>&nbsp;</label>
 						<div>
 							<label>
 								<button type="submit" class="btn btn-primary">Submit</button>

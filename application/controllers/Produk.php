@@ -8,11 +8,14 @@ class Produk extends CI_Controller {
 	{
 		parent::__construct();
         $this->data['active'] = 'produk';
-        $this->load->library('mycrud', array('tblname' => 'm_produk'));
+        $this->load->library('mycrud', array('tblname' => 'm_satuan'));
+		$this->load->model('m_produk');
+		
 	} 
 
 	function index()
 	{
+		
 		$this->load->view('sidebar', $this->data);
 		$this->load->view('produk/view_produk', $this->data);
 		$this->load->view('foot', $this->data);
@@ -20,7 +23,6 @@ class Produk extends CI_Controller {
 	
 	function add()
 	{	
-	
         $this->load->view('produk/add_produk', $this->data);
 		$this->load->view('js_form');
         
@@ -28,11 +30,17 @@ class Produk extends CI_Controller {
 
 	function edit($id = null)
 	{	
-		$this->data['satuan'] = $this->mycrud->getById('satuan_id', $id);
-		
-		$this->load->view('satuan/edit_satuan', $this->data);
+		$this->data['produk'] = $this->m_produk->getById($id);
+		$this->load->view('produk/edit_produk', $this->data);
 		$this->load->view('js_form');
         
 	}
 
+	function konversi($id = null)
+	{
+		$this->data['satuan'] = $this->mycrud->readData();
+		$this->data['produk'] = $this->m_produk->getById($id);
+		$this->load->view('produk/konversi', $this->data);
+		
+	}
 }

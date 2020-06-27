@@ -9,7 +9,7 @@
 	<link href="<?= base_url().'assets/'?>css/datepicker3.css" rel="stylesheet">
 	<link href="<?= base_url().'assets/'?>css/styles.css" rel="stylesheet">
 	<link href="<?= base_url().'assets/'?>css/bootstrap-table.css" rel="stylesheet">
-
+	
 	<!--Custom Font-->
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 	<!--[if lt IE 9]>
@@ -17,7 +17,9 @@
 	<script src="<?= base_url().'assets/'?>js/respond.min.js"></script>
 	<![endif]-->
 	<script src="<?= base_url().'assets/'?>js/jquery-1.11.1.min.js"></script>
-	
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/css/bootstrap-select.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.1/js/bootstrap-select.js"></script>
+
 </head>
 <body>
 	<nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -43,23 +45,40 @@
 		<div class="divider"></div>
 		
 		<ul class="nav menu">
-			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-dashboard">&nbsp;</em> Soal No. 1.1.3</a></li>
+			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-question-circle">&nbsp;</em> Soal No. 1.1.3</a></li>
 			<li class="<?= $active=='reports' ? 'active' : '' ?>"><a href="<?= base_url('JenisReport')?>"><em class="fa fa-bar-chart">&nbsp;</em> Report</a></li>
 			
 			<li class="parent "><a data-toggle="collapse" href="#sub-master">
 				<em class="fa fa-navicon">&nbsp;</em> Master <span data-toggle="collapse" href="#sub-master" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children <?= in_array($active, array('satuan','produk','gudang')) ? '' : 'collapse' ?>" id="sub-master">
-					<li><a class="<?= $active =='gudang' ? 'active' : '' ?>" href="<?= base_url('Gudang')?>">
+					<li><a class="<?= $active == 'gudang' ? 'active' : '' ?>" href="<?= base_url('Gudang')?>">
 						<span class="fa fa-institution">&nbsp;</span> Gudang
 					</a></li>	
-					<li><a class="<?= $active =='satuan' ? 'active' : '' ?>" href="<?= base_url('Satuan')?>">
+					<li><a class="<?= $active == 'satuan' ? 'active' : '' ?>" href="<?= base_url('Satuan')?>">
 						<span class="fa fa-archive">&nbsp;</span> Satuan
+					</a></li>
+					<li><a class="<?= $active == 'produk' ? 'active' : '' ?>" href="<?= base_url('Produk')?>">
+						<span class="fa fa-shopping-basket">&nbsp;</span> Produk
 					</a></li>
 					
 				</ul>
 			</li>
 			
+			<li class="parent "><a data-toggle="collapse" href="#sub-trans">
+				<em class="fa fa-navicon">&nbsp;</em> Transaksi <span data-toggle="collapse" href="#sub-trans" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children <?= in_array($active, array('adjust','transfer')) ? '' : 'collapse' ?>" id="sub-trans">
+					<li><a class="<?= $active == 'adjust' ? 'active' : '' ?>" href="<?= base_url('Adjustment')?>">
+						<span class="fa fa-refresh">&nbsp;</span> Adjustment
+					</a></li>	
+					<li><a class="<?= $active == 'transfer' ? 'active' : '' ?>" href="<?= base_url('Transfer')?>">
+						<span class="fa fa-share">&nbsp;</span> Transfer
+					</a></li>
+					
+				</ul>
+			</li>
+
 			<li><a href="<?= base_url('Config')?>"><em class="fa fa-cog">&nbsp;</em> Config</a></li>
 		</ul>
 	</div><!--/.sidebar-->

@@ -29,8 +29,7 @@
 	<script src="<?= base_url().'assets/'?>js/bootstrap-datepicker.js"></script>
 	<script src="<?= base_url().'assets/'?>js/custom.js"></script>
 	<script src="<?= base_url().'assets/'?>js/bootstrap-table.js"></script>
-
-
+	
 	<script>
 		!function ($) {
 			// Bootstrap Modal for Actions
@@ -103,6 +102,19 @@
 			return tgl;
 		}
 		
+		function ListFormatter(value, row, index){ 	
+			var el = '';
+			if (row.is_active == 0) el += '<del>';  
+				el += value;
+			if (row.is_active == 0) el += '</del>';
+			return el;
+		}
+
+		function DetailFormatter(value, row, index) {
+			var el = '<a class="Actions" data-toggle="modal" href="#myActions" data-id="' + value + '" title="Detail"><span class="glyphicon glyphicon-list"></span></a>';
+			return el;
+				
+		}
 	</script>
 
 </body>

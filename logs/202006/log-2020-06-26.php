@@ -1246,3 +1246,25 @@ DEBUG - 2020-06-26 15:03:04 --> UTF-8 Support Enabled
 DEBUG - 2020-06-26 15:03:04 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2020-06-26 15:03:04 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
 DEBUG - 2020-06-26 15:03:04 --> Total execution time: 0.1106
+DEBUG - 2020-06-26 15:56:50 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 15:56:50 --> No URI present. Default controller set.
+DEBUG - 2020-06-26 15:56:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 15:56:50 --> Total execution time: 0.0863
+DEBUG - 2020-06-26 16:34:29 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 16:34:29 --> No URI present. Default controller set.
+DEBUG - 2020-06-26 16:34:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 16:34:29 --> Total execution time: 0.1042
+DEBUG - 2020-06-26 16:34:33 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 16:34:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 16:34:33 --> Total execution time: 0.0753
+DEBUG - 2020-06-26 16:34:34 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 16:34:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 16:34:34 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-26 16:34:34 --> Total execution time: 0.1082
+DEBUG - 2020-06-26 16:34:35 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 16:34:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 16:34:35 --> Total execution time: 0.0775
+DEBUG - 2020-06-26 16:34:35 --> UTF-8 Support Enabled
+DEBUG - 2020-06-26 16:34:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-26 16:34:35 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-26 16:34:35 --> Total execution time: 0.1067
