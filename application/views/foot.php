@@ -74,7 +74,7 @@
     <!-- standart number formating function -->
     <script>
 		function NumberFormatter(value, row, index) {
-			return 'Rp '+new Intl.NumberFormat('id-ID').format(value);
+			return new Intl.NumberFormat('id-ID').format(value);
 		
 		}
 

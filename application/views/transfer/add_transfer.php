@@ -102,12 +102,14 @@
 		
 		var i = $('#qty').val();
 		var produk = $('#produk_id').val();
-	
-		$.get('<?= base_url()?>api/APIAdjust/add/?produk_id='+ produk + '&qty=' + i, function(data, status){
+		var gudang = $("#gudang_id").val();
+		
+		$.get('<?= base_url()?>api/APITransfer/add/?gudang_id='+ gudang + '&produk_id='+ produk + '&qty=' + i, function(data, status){
 			if (data['success']){
 				console.log(data['message']);
+				$("#gudang_id").attr("disabled", true); 
 			}else {
-				alert(data['message'])
+				alert(data['message']);
 			}
 		});
 		
@@ -117,7 +119,8 @@
 		setTimeout(function () {
 			$('#tblAdjust').bootstrapTable('refresh');
 		}, 2000);
-
+		
+		
 	}
 
 	function removeAdjust(id){
@@ -146,9 +149,7 @@
 	// BOOTSTRAP TABLE INIT
 	// =======================
 	$(function () {
-		if (confirm('Hapus data temporari?')) {
-			$.get('<?= base_url()?>api/APIAdjust/delete_temp');
-		}
+		$.get('<?= base_url()?>api/APIAdjust/delete_temp');
 		$('.selectpicker').selectpicker();
 		$('[data-toggle="table"]').bootstrapTable();
 		setTimeout(function () {

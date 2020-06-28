@@ -6,6 +6,8 @@
                         <input style="text-transform: uppercase" name="nm_gudang" type="text" class="form-control" maxlength="25" required>
                     </div>
                 </div>
+			</div>
+			<div class="row">
 				<div class="col-md-6">
 					<div class="form-group">
 						<div>

@@ -13102,3 +13102,86 @@ DEBUG - 2020-06-27 22:51:48 --> UTF-8 Support Enabled
 DEBUG - 2020-06-27 22:51:48 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2020-06-27 22:51:48 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
 DEBUG - 2020-06-27 22:51:48 --> Total execution time: 0.1133
+DEBUG - 2020-06-27 22:53:32 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:32 --> Total execution time: 0.0943
+DEBUG - 2020-06-27 22:53:33 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:33 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:33 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:53:33 --> Total execution time: 0.1308
+DEBUG - 2020-06-27 22:53:35 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:35 --> Total execution time: 0.1423
+DEBUG - 2020-06-27 22:53:35 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:35 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:53:35 --> Total execution time: 0.1204
+DEBUG - 2020-06-27 22:53:37 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:37 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:37 --> Total execution time: 0.0809
+DEBUG - 2020-06-27 22:53:38 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:38 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:53:38 --> Total execution time: 0.1179
+DEBUG - 2020-06-27 22:53:40 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:40 --> Total execution time: 0.0910
+DEBUG - 2020-06-27 22:53:40 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:40 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:53:40 --> Total execution time: 0.1207
+DEBUG - 2020-06-27 22:53:43 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:43 --> Total execution time: 0.0940
+DEBUG - 2020-06-27 22:53:43 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:43 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:53:43 --> Total execution time: 0.1155
+DEBUG - 2020-06-27 22:53:46 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:53:46 --> No URI present. Default controller set.
+DEBUG - 2020-06-27 22:53:46 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:53:46 --> Total execution time: 0.0778
+DEBUG - 2020-06-27 22:54:34 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:34 --> Total execution time: 0.0797
+DEBUG - 2020-06-27 22:54:34 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:35 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:35 --> Total execution time: 0.1239
+DEBUG - 2020-06-27 22:54:40 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:40 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:40 --> Total execution time: 0.1085
+DEBUG - 2020-06-27 22:54:43 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:43 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:43 --> Total execution time: 0.0935
+DEBUG - 2020-06-27 22:54:45 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:45 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:45 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:45 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:45 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:45 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:45 --> Total execution time: 0.1029
+DEBUG - 2020-06-27 22:54:45 --> Total execution time: 0.1044
+DEBUG - 2020-06-27 22:54:45 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:45 --> Total execution time: 0.1009
+DEBUG - 2020-06-27 22:54:47 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:54:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:54:47 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:54:47 --> Total execution time: 0.0950
+DEBUG - 2020-06-27 22:56:59 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:56:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:56:59 --> Total execution time: 0.0830
+DEBUG - 2020-06-27 22:56:59 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:56:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:56:59 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:56:59 --> Total execution time: 0.1202
+DEBUG - 2020-06-27 22:57:01 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:57:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:57:01 --> Total execution time: 0.0935
+DEBUG - 2020-06-27 22:57:01 --> UTF-8 Support Enabled
+DEBUG - 2020-06-27 22:57:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2020-06-27 22:57:02 --> Config file loaded: D:\PRO\royal-inventory\application\config/rest.php
+DEBUG - 2020-06-27 22:57:02 --> Total execution time: 0.1120

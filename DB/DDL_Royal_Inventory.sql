@@ -77,6 +77,25 @@ ALTER TABLE public.t_stok ADD CONSTRAINT t_stok_fkey1 FOREIGN KEY (gudang_id) RE
 ALTER TABLE public.t_stok ADD CONSTRAINT t_stok_fkey2 FOREIGN KEY (produk_id) REFERENCES m_produk(produk_id);
 
 
+-- public.t_balance definition
+CREATE TABLE public.t_balance (
+	periode varchar(6) NOT NULL,
+	gudang_id int NOT NULL,
+	produk_id int NOT NULL,
+	awal int NOT NULL DEFAULT 0,
+	masuk int NOT NULL DEFAULT 0,
+	keluar int NOT NULL DEFAULT 0,
+	adjust int NOT NULL DEFAULT 0,
+	akhir int NOT NULL DEFAULT 0,
+	date_created timestamptz NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	date_updated timestamptz NULL,
+	CONSTRAINT t_balance_pkey PRIMARY KEY (periode, gudang_id, produk_id)
+);
+-- public.t_balance foreign keys
+ALTER TABLE public.t_balance ADD CONSTRAINT t_balance_fkey1 FOREIGN KEY (gudang_id) REFERENCES m_gudang(gudang_id);
+ALTER TABLE public.t_balance ADD CONSTRAINT t_balance_fkey2 FOREIGN KEY (produk_id) REFERENCES m_produk(produk_id);
+
+
 -- public.transaksi_header definition
 CREATE TABLE public.transaksi_header (
 	transaksi_id serial NOT NULL,
@@ -104,6 +123,7 @@ CREATE TABLE public.transaksi_detail (
 -- public.transaksi_detail foreign keys
 ALTER TABLE public.transaksi_detail ADD CONSTRAINT transaksi_detail_fkey1 FOREIGN KEY (transaksi_id) REFERENCES transaksi_header(transaksi_id);
 ALTER TABLE public.transaksi_detail ADD CONSTRAINT transaksi_detail_fkey2 FOREIGN KEY (produk_id) REFERENCES m_produk(produk_id);
+
 
 
 -- public.t_temp definition

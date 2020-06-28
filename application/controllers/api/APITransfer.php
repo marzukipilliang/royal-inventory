@@ -7,8 +7,60 @@ class APITransfer extends REST_Controller {
 		parent::__construct();	
 		$this->load->model('m_produk');
 		$this->load->model('m_transaksi');
-	
+		$this->load->model('m_stok');
+		
 	} 
+	
+	function add_get()
+    {
+		$gudang_id = $this->get('gudang_id');
+		$produk_id = $this->get('produk_id');
+		$qty = $this->get('qty');
+		
+		if ($qty <= 0){
+			$this->response(array('success' => FALSE, 'message' => 'Qty minimal 1!'), 200);
+		}
+		
+		$prod = $this->m_produk->getById($produk_id);
+		
+		if ($prod->satuan_id == 0){
+			$this->response(array('success' => FALSE, 'message' => 'Produk ini belum ada konversi satuan!'), 200);	
+		}
+		
+		$stok = $this->m_stok->getById($gudang_id, $produk_id);
+		if (!$stok){
+			$this->response(array('success' => FALSE, 'message' => 'Produk ini belum ada stok!'), 200);
+			
+		}else {
+			if ($stok->qty <= 0 || $qty > $stok->qty){
+				$this->response(array('success' => FALSE, 'message' => 'Stok:'.$stok->qty.' tidak mencukupi!'), 200);
+			}
+		}
+		
+		
+		$object['produk_id'] = $produk_id;	
+		$rs = $this->m_transaksi->getTempById($produk_id);
+		if ($rs){
+			$object['qty'] = $rs->qty + $qty;
+			if ($object['qty'] > $stok->qty){
+				$this->response(array('success' => FALSE, 'message' => 'Stok:'.$stok->qty.' tidak mencukupi!'), 200);
+			}
+			$id = $this->m_transaksi->updateTemp($rs->temp_id, $object);
+			
+		}else {
+			$object['qty'] = $qty;
+			$id = $this->m_transaksi->insertTemp($object);
+		}
+		
+		if ($id){
+			$this->response(array('success' => TRUE, 'message' => 'Berhasil tambah data!') , 200);
+			
+		}else {
+			$this->response(array('success' => FALSE, 'message' => 'Data tidak bisa diinput!'), 200);
+			
+		}
+		
+    }
 	
 	function proses_get(){
 		if (!$this->get('gudang_id')){
@@ -51,14 +103,23 @@ class APITransfer extends REST_Controller {
 					'produk_id' => $items->produk_id,
 					'qty' => $items->qty
 				);
-				$this->m_transaksi->insertDetail($dtout);	
-			
+				$this->m_transaksi->insertDetail($dtout);
+				// stok masuk
+				$this->m_stok->updateStok($this->get('gudang_id'), $items->produk_id, $items->qty * -1);
+				// balance
+				$this->m_stok->updateBalance(date('Ym'), $this->get('gudang_id'), $items->produk_id, 'KELUAR', $items->qty);
+				
+				
 				$dtin = array(
 					'transaksi_id' => $inid,
 					'produk_id' => $items->produk_id,
 					'qty' => $items->qty
 				);
-				$this->m_transaksi->insertDetail($dtin);	
+				$this->m_transaksi->insertDetail($dtin);
+				// stok keluar
+				$this->m_stok->updateStok($this->get('tujuan_id'), $items->produk_id, $items->qty);
+				// balance
+				$this->m_stok->updateBalance(date('Ym'), $this->get('tujuan_id'), $items->produk_id, 'MASUK', $items->qty);
 			}
 			
 			$this->m_transaksi->deleteAllTemp();

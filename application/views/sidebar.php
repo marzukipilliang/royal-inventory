@@ -46,8 +46,7 @@
 		
 		<ul class="nav menu">
 			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-question-circle">&nbsp;</em> Soal No. 1.1.3</a></li>
-			<li class="<?= $active=='reports' ? 'active' : '' ?>"><a href="<?= base_url('JenisReport')?>"><em class="fa fa-bar-chart">&nbsp;</em> Report</a></li>
-			
+		
 			<li class="parent "><a data-toggle="collapse" href="#sub-master">
 				<em class="fa fa-navicon">&nbsp;</em> Master <span data-toggle="collapse" href="#sub-master" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
@@ -79,7 +78,35 @@
 				</ul>
 			</li>
 
-			<li><a href="<?= base_url('Config')?>"><em class="fa fa-cog">&nbsp;</em> Config</a></li>
+			<li class="parent "><a data-toggle="collapse" href="#sub-report">
+				<em class="fa fa-bar-chart">&nbsp;</em> Report <span data-toggle="collapse" href="#sub-report" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children <?= in_array($active, array('stok','mutasi')) ? '' : 'collapse' ?>" id="sub-report">
+					<li><a class="<?= $active == 'stok' ? 'active' : '' ?>" href="<?= base_url('Stok')?>">
+						<span class="fa fa-list-ol">&nbsp;</span> Stock on Hand
+					</a></li>	
+					<li><a class="<?= $active == 'balance' ? 'active' : '' ?>" href="<?= base_url('Balance')?>">
+						<span class="fa fa-calendar">&nbsp;</span> Stock Balance
+					</a></li>
+					
+				</ul>
+			</li>
+
+			<li class="parent "><a data-toggle="collapse" href="#sub-config">
+				<em class="fa fa-cog">&nbsp;</em> Config <span data-toggle="collapse" href="#sub-config" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children <?= in_array($active, array('movement','erd','flowchart')) ? '' : 'collapse' ?>" id="sub-config">
+					<li><a class="<?= $active == 'movement' ? 'active' : '' ?>" href="<?= base_url('Movement')?>">
+						<span class="fa fa-arrows-h">&nbsp;</span> Movement Type
+					</a></li>	
+					<li><a class="<?= $active == 'erd' ? 'active' : '' ?>" href="<?= base_url('Erd')?>">
+						<span class="fa fa-database">&nbsp;</span> ERD
+					</a></li>
+					<li><a class="<?= $active == 'flowchart' ? 'active' : '' ?>" href="<?= base_url('Flowchart')?>">
+						<span class="fa fa-calendar">&nbsp;</span> Flowchart
+					</a></li>
+				</ul>
+			</li>
 		</ul>
 	</div><!--/.sidebar-->
 		

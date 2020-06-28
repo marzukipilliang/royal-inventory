@@ -7,7 +7,7 @@ class APIAdjust extends REST_Controller {
 		parent::__construct();	
 		$this->load->model('m_produk');
 		$this->load->model('m_transaksi');
-	
+		$this->load->model('m_stok');
 	} 
 	
 	// Insert Data
@@ -118,7 +118,13 @@ class APIAdjust extends REST_Controller {
 					'produk_id' => $items->produk_id,
 					'qty' => $items->qty
 				);
-				$this->m_transaksi->insertDetail($detail);	
+				
+				$this->m_transaksi->insertDetail($detail);
+				// stok
+				$this->m_stok->updateStok($this->get('gudang_id'), $items->produk_id, $items->qty);
+				// balance
+				$this->m_stok->updateBalance(date('Ym'), $this->get('gudang_id'), $items->produk_id, 'ADJUST', $items->qty);
+				
 			}
 			$this->m_transaksi->deleteAllTemp();
 			$this->response(array('success' => TRUE, 'message' => 'Sukses diproses dengan nomor '.$id), 200);

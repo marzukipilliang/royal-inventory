@@ -11,7 +11,7 @@ class APIConfig extends REST_Controller {
 	} 
 	
 	// View Data
-	function view_get()
+	function movement_get()
     {
 		
 		$rs = $this->mycrud->readData();

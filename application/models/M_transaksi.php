@@ -1,5 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 class M_transaksi extends CI_Model {
+	
 	function getGudang(){
 		$query  = $this->db->get("m_gudang");
 		return $query->result();

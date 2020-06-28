@@ -6,6 +6,8 @@
                         <input style="text-transform: uppercase"  value="<?= $satuan->nm_satuan ?>" name="nm_satuan" type="text" class="form-control"  maxlength="15" required>
                     </div>
                 </div>
+			</div>
+			<div class="row">     
 				<div class="col-md-6">
 					<div class="form-group">
 						<div>
