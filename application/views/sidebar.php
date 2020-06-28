@@ -45,7 +45,7 @@
 		<div class="divider"></div>
 		
 		<ul class="nav menu">
-			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-question-circle">&nbsp;</em> Soal No. 1.1.3</a></li>
+			<li class="<?= $active=='dashboard' ? 'active' : '' ?>"><a href="<?= base_url() ?>"><em class="fa fa-question-circle">&nbsp;</em> Soal No. 1.3</a></li>
 		
 			<li class="parent "><a data-toggle="collapse" href="#sub-master">
 				<em class="fa fa-navicon">&nbsp;</em> Master <span data-toggle="collapse" href="#sub-master" class="icon pull-right"><em class="fa fa-plus"></em></span>
@@ -96,15 +96,31 @@
 				<em class="fa fa-cog">&nbsp;</em> Config <span data-toggle="collapse" href="#sub-config" class="icon pull-right"><em class="fa fa-plus"></em></span>
 				</a>
 				<ul class="children <?= in_array($active, array('movement','erd','flowchart')) ? '' : 'collapse' ?>" id="sub-config">
-					<li><a class="<?= $active == 'movement' ? 'active' : '' ?>" href="<?= base_url('Movement')?>">
-						<span class="fa fa-arrows-h">&nbsp;</span> Movement Type
-					</a></li>	
+					
 					<li><a class="<?= $active == 'erd' ? 'active' : '' ?>" href="<?= base_url('Erd')?>">
 						<span class="fa fa-database">&nbsp;</span> ERD
 					</a></li>
 					<li><a class="<?= $active == 'flowchart' ? 'active' : '' ?>" href="<?= base_url('Flowchart')?>">
 						<span class="fa fa-calendar">&nbsp;</span> Flowchart
 					</a></li>
+					<li><a class="<?= $active == 'movement' ? 'active' : '' ?>" href="<?= base_url('Movement')?>">
+						<span class="fa fa-arrows-h">&nbsp;</span> Movement Type
+					</a></li>	
+				</ul>
+			</li>
+
+			<li class="parent "><a data-toggle="collapse" href="#sub-query">
+				<em class="fa fa-files-o">&nbsp;</em> Soal Query <span data-toggle="collapse" href="#sub-query" class="icon pull-right"><em class="fa fa-plus"></em></span>
+				</a>
+				<ul class="children <?= in_array($active, array('satu','dua')) ? '' : 'collapse' ?>" id="sub-query">
+					
+					<li><a class="<?= $active == 'satu' ? 'active' : '' ?>" href="<?= base_url('Satu')?>">
+						<span class="fa fa-file-text">&nbsp;</span> Nomor 2.1
+					</a></li>
+					<li><a class="<?= $active == 'dua' ? 'active' : '' ?>" href="<?= base_url('Dua')?>">
+						<span class="fa fa-file-text-o">&nbsp;</span> Nomor 2.2
+					</a></li>
+					
 				</ul>
 			</li>
 		</ul>

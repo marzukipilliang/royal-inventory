@@ -49,8 +49,8 @@
 					 <table id="tblAdjust" data-toggle="table" data-url="<?= base_url('api/APIAdjust/view')?>"  >
 						<thead>
 						<tr>
-							<th data-field="nm_produk" data-align="center">Produk</th>
-							<th data-field="qty" data-align="center">Qty</th>
+							<th data-field="nm_produk">Produk</th>
+							<th data-field="qty" data-align="right">Qty</th>
 							<th data-formatter="RemoveFormatter" data-field="temp_id" data-align="center"><i class="fa fa-trash"  ></i></th>        
 						</tr>
 						</thead>

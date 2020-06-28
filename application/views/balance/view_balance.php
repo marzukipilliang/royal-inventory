@@ -35,6 +35,7 @@
                         <table id="tbl" data-toggle="table" data-url="<?= base_url('api/APIStok/balance/?periode='.$periode.'&gudang_id='.$gudang_id)?>"  data-show-refresh="true" data-show-toggle="true" data-show-columns="true" data-search="true" data-select-item-name="toolbar1" data-pagination="true" data-sort-name="date_created" data-sort-order="desc" >
                             <thead>
                             <tr>
+								<th data-field="kode" data-align="center">Kode</th>
 								<th data-field="nm_produk" >Produk</th>
 								<th data-formatter="NumberFormatter" data-field="awal" data-align="right" >Awal</th>
 								<th data-formatter="NumberFormatter" data-field="masuk" data-align="right" >Masuk</th>

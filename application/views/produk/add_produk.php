@@ -3,7 +3,7 @@
                 <div class="col-md-3">
                     <div class="form-group">
                         <label>Kode</label>
-                        <input style="text-transform: uppercase" name="kode" type="text" class="form-control" maxlength="7" required>
+                        <input style="text-transform: uppercase" name="kode" type="text" class="form-control" maxlength="7" required pattern="[a-zA-Z0-9]{7}">
 						<p class="help-block">*7 karakter.</p>
 					</div>
                 </div>

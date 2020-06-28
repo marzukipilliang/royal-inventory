@@ -102,4 +102,30 @@ class M_transaksi extends CI_Model {
 		$query  = $this->db->get("transaksi_detail a");
 		return $query->result();
 	}
+	
+	function getSoalSatu(){
+		$query = $this->db->query($this->querySQL());
+		return $query->result();
+	}
+	
+	function querySQL(){
+		$sql = "SELECT m.nm_gudang,n.periode,n.kode,n.nm_produk,n.brpx_keluar FROM m_gudang m join(
+				SELECT
+					row_number() OVER (partition by gudang_id, TO_CHAR(b.tanggal, 'YYYYMM') ORDER BY count(*) DESC),
+					b.gudang_id,
+					TO_CHAR(b.tanggal, 'YYYYMM') AS periode,
+					c.kode, c.nm_produk, 
+					count(*) as brpx_keluar
+				FROM transaksi_detail a
+				JOIN transaksi_header b ON b.transaksi_id=a.transaksi_id 
+				JOIN m_produk c ON c.produk_id=a.produk_id
+				WHERE EXISTS(SELECT 1 FROM m_mutasi x WHERE mutasi_id=b.mutasi_id AND x.tipe='OUT')
+				GROUP BY b.gudang_id, TO_CHAR(b.tanggal, 'YYYYMM') , c.kode, c.nm_produk 
+				ORDER BY count(*) DESC 
+			)n ON n.gudang_id=m.gudang_id 
+			WHERE row_number <= 10
+			ORDER BY nm_gudang, periode, brpx_keluar DESC";
+			
+		return $sql;
+	}
 }

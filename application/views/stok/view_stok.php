@@ -27,6 +27,7 @@
 								<thead>
 								<tr>
 									<th data-field="nm_gudang" >Gudang</th>
+									<th data-field="kode" data-align="center">Kode</th>
 									<th data-field="nm_produk" >Produk</th>
 									<th data-formatter="NumberFormatter" data-field="qty" data-align="right" >Qty</th>
 									<th data-formatter="KonversiFormatter" data-field="satuan" data-align="center" >Konversi</th>

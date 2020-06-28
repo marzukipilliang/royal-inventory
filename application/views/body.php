@@ -1,6 +1,6 @@
 <div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Soal No. 1.1.3</h1>
+				<h1 class="page-header">Soal No. 1.3</h1>
 			</div>
 		</div><!--/.row-->
 		

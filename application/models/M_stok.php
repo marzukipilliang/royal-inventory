@@ -3,7 +3,7 @@ class M_stok extends CI_Model {
 	private $table_name = "m_stok";
 
 	function getByGudang($gudang_id){
-		$sql = 'SELECT a.*, b.nm_gudang, c.nm_produk,(
+		$sql = 'SELECT a.*, b.nm_gudang, c.kode, c.nm_produk,(
 					SELECT jsonb_agg(row)
 								FROM (
 									SELECT x.nm_satuan, y.konversi
@@ -21,7 +21,7 @@ class M_stok extends CI_Model {
 	}
 
 	function getById($gudang_id, $produk_id){
-		$this->db->select("a.*, b.nm_gudang, c.nm_produk");
+		$this->db->select("a.*, b.nm_gudang, c.kode, c.nm_produk");
 		$this->db->join("m_gudang b","b.gudang_id=a.gudang_id");
 		$this->db->join("m_produk c","c.produk_id=a.produk_id");
 		$this->db->where("a.gudang_id", $gudang_id);
@@ -52,7 +52,7 @@ class M_stok extends CI_Model {
 	}
 
 	function getByPeriode($periode, $gudang_id, $produk_id){
-		$this->db->select("a.*, b.nm_gudang, c.nm_produk");
+		$this->db->select("a.*, b.nm_gudang, c.kode, c.nm_produk");
 		$this->db->join("m_gudang b","b.gudang_id=a.gudang_id");
 		$this->db->join("m_produk c","c.produk_id=a.produk_id");
 		$this->db->where("a.periode", $periode);
@@ -131,7 +131,7 @@ class M_stok extends CI_Model {
 	}
 
 	function getBalance($periode, $gudang_id){
-		$this->db->select("a.*, b.nm_gudang, c.nm_produk");
+		$this->db->select("a.*, b.nm_gudang, c.kode, c.nm_produk");
 		$this->db->join("m_gudang b","b.gudang_id=a.gudang_id");
 		$this->db->join("m_produk c","c.produk_id=a.produk_id");
 		$this->db->where("a.periode", $periode);
